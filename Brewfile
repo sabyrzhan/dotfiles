@@ -37,6 +37,7 @@ brew "fnm"
 
 # Casks
 cask "arc"
+cask "docker"
 cask "1password"
 cask "1password-cli"
 cask "espanso"
