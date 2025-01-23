@@ -1,0 +1,139 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # Terraform and Terramate
+  - trigger: ":tfplan"
+    replace: "terraform plan"
+
+  - trigger: ":tfa"
+    replace: "terraform apply"
+
+  - trigger: ":tfd"
+    replace: "terraform destroy"
+
+  - trigger: ":tfstate"
+    replace: "terraform state list"
+
+  - trigger: ":tfi"
+    replace: "terraform init"
+
+  - trigger: ":tffmt"
+    replace: "terraform fmt -recursive ."
+
+  - trigger: ":tfsrm"
+    replace: "terraform state rm"
+
+  - trigger: ":tfsls"
+    replace: "terraform state list"
+
+  - trigger: ":tfout"
+    replace: "terraform output -json"
+
+  - trigger: ":tfn"
+    replace: |
+      terraform providers lock \
+        -net-mirror=https://artifactory.noones.tools/artifactory/api/terraform/terraform-provider-local/providers/ \
+        -platform=windows_amd64 \
+        -platform=darwin_amd64 \
+        -platform=darwin_arm64 \
+        -platform=linux_amd64 \
+        -platform=linux_arm64 \
+        noones/noones
+  - trigger: ":tflock"
+    replace: |
+      terraform providers lock \
+        -platform=windows_amd64 \
+        -platform=darwin_amd64 \
+        -platform=darwin_arm64 \
+        -platform=linux_amd64 \
+        -platform=linux_arm64
+
+  - trigger: ":tmg"
+    replace: "terramate generate && terramate fmt"
+
+  - trigger: ":tmfmt"
+    replace: "terramate fmt"
+
+  # Helm
+  - trigger: ":helmdep"
+    replace: "helm dependency update"
+
+  - trigger: ":helmtpl"
+    replace: "helm template ./ --debug --dry-run -f values.yaml -f values-stg.yaml"
+
+  # AWS
+  - trigger: ":awsl"
+    replace: "aws sso login --profile=login"
+
+  # Gitlab
+  - trigger: ":gls"
+    replace: "gitlab-search SEARCH"
+
+  - trigger: ":glvars"
+    replace: "http https://gitlab.example.com/api/v4/projects/PROJECT_ID/variables PRIVATE-TOKEN:$GITLAB_ACCESS_TOKEN"
+
+  # ZX
+  - trigger: ":zxsh"
+    replace: "#!/usr/bin/env zx"
+
+  # Docker
+  - trigger: ":dps"
+    replace: "docker ps"
+
+  # JFrog
+  - trigger: ":jfu"
+    replace: |
+      apikey='jfron api key'
+      curl -X PUT "http://artifactory.noones.tools/artifactory/terraform-noones-provider-local/noones/noones/0.0.0-SNAPSHOT/terraform-provider-noones_0.0.0-SNAPSHOT_darwin_amd64.zip" -L -T dist/terraform-provider-noones_0.0.0-SNAPSHOT_darwin_amd64.zip -H "$apikey"
+
+  - trigger: ":jfcu"
+    replace: |
+      apikey='jfron api key'
+      JFROG_CLI_LOG_LEVEL=DEBUG
+      CI=true
+      jf rt u --access-token $apikey --url https://artifactory.noones.tools/artifactory ./dist/terraform-provider-noones_0.0.0-SNAPSHOT_linux_amd64.zip terraform-noones-provider-local/noones/noones/0.0.0-SNAPSHOT/
+  
+
+  # Harbor
+  - trigger: ":harbor"
+    replace: "http \"https://harbor.noones.tools/api/v2.0/search?q=SEARCH\""
+
+  # Find text
+  - trigger: ":find"
+    replace: "grep -Rn SEARCH ."
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
