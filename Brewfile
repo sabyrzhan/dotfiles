@@ -36,6 +36,7 @@ brew "teamookla/speedtest/speedtest"
 brew "fnm"
 
 # Casks
+cask "arc"
 cask "1password"
 cask "1password-cli"
 cask "espanso"
