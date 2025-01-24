@@ -1,6 +1,8 @@
 # Debug start: uncomment bellow for zshrc load time debug (also uncommend the end at the end of this file)
 # zmodload zsh/zprof
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
