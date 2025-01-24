@@ -34,6 +34,7 @@ brew "hashicorp/tap/vault"
 brew "johanhaleby/kubetail/kubetail", args: ["with-short-names"]
 brew "teamookla/speedtest/speedtest"
 brew "fnm"
+brew "yarn"
 
 # Casks
 cask "arc"
