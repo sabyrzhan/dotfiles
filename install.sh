@@ -6,6 +6,7 @@ brew bundle install --file=$PWD/Brewfile
 echo ""
 
 echo "Installing fnm..."
+eval "$(fnm env --use-on-cd --shell zsh)"
 fnm install --lts && fnm use lts-latest
 echo ""
 
