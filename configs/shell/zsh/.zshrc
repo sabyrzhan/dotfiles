@@ -147,5 +147,10 @@ alias docker="supdock"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
+# Git aliases
+alias gs="git status"
+alias gr="git remote -vv"
+alias gp="git pull"
+
 # Debug end: uncomment bellow for zshrc load time debug (also uncommend the start at the start of this file)
 # zprof
