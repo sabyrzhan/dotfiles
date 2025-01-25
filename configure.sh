@@ -15,3 +15,7 @@ echo "Now manually reconfigure p10k: p10k configure"
 # karabiner
 mkdir -p $HOME/.config/karabiner
 cp -R configs/karabiner/ $HOME/.config/karabiner
+
+# git configs
+cp -R -i configs/git/ $HOME/
+echo "Finished git config copy. WARNING: update your email and fullname in personal and work configs"

@@ -1,0 +1,9 @@
+[includeIf "hasconfig:remote.*.url:git@github.com:sabyrzhan/**"]
+path = /Users/sabyrzhan/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:sabyrzhan/**"]
+path = /Users/sabyrzhan/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@gitlab.noones.tools:*/**"]
+path = /Users/sabyrzhan/.gitconfig-work
+
+[core]
+  pager = cat
