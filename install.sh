@@ -12,8 +12,8 @@ echo ""
 
 # omz install, powerlevel10k theme install
 echo "Installing zsh configs..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || true
 echo ""
 
 # supdock
@@ -25,6 +25,7 @@ echo ""
 echo "Installing fubectl..."
 curl -L https://rawgit.com/kubermatic/fubectl/master/fubectl.source -o $HOME/fubectl.source
 echo "Installing krew..."
+
 #krew
 (
   set -x; cd "$(mktemp -d)" &&
