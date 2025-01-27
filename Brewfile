@@ -35,6 +35,7 @@ brew "johanhaleby/kubetail/kubetail", args: ["with-short-names"]
 brew "teamookla/speedtest/speedtest"
 brew "fnm"
 brew "yarn"
+brew "python"
 
 # Casks
 cask "arc"
