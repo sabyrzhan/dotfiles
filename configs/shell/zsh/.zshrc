@@ -153,6 +153,7 @@ export PATH="$PATH:$HOME/.local/bin"
 alias gs="git status"
 alias gr="git remote -vv"
 alias gp="git pull"
+alias gc="git clone"
 
 # Debug end: uncomment bellow for zshrc load time debug (also uncommend the start at the start of this file)
 # zprof
