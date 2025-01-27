@@ -2,7 +2,8 @@
 # zmodload zsh/zprof
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export PATH=$PATH:$(brew --prefix python)/libexec/bin
+export PATH="$PATH:$(brew --prefix python)/libexec/bin"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
