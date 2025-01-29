@@ -156,7 +156,7 @@ alias gp="git pull"
 alias gc="git clone"
 
 #sdkman
-source "/Users/$HOME/.sdkman/bin/sdkman-init.sh"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Debug end: uncomment bellow for zshrc load time debug (also uncommend the start at the start of this file)
 # zprof
