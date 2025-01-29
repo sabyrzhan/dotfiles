@@ -139,5 +139,9 @@ matches:
   - trigger: ":nohup"
     replace: "nohup CMD > output.txt 2>&1 &"
 
+  # xattr
+  - trigger: ":xattr"
+    replace: "xattr -d com.apple.quarantine PATH"
+
   # And much more! For more information, visit the docs: https://espanso.org/docs/
 
