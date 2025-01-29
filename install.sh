@@ -39,3 +39,7 @@ echo "Installing krew..."
 echo ""
 echo "Finished installation!"
 
+# sdkman
+echo "Installing sdkman..."
+curl -s "https://get.sdkman.io" | bash
+echo "Finishing installing sdkman!"
