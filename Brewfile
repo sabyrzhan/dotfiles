@@ -37,6 +37,7 @@ brew "fnm"
 brew "yarn"
 brew "python"
 brew "libpq" # PostgreSQL tools: https://stackoverflow.com/questions/44654216/correct-way-to-install-psql-without-full-postgres-on-macos
+brew "skopeo"
 
 # Casks
 cask "arc"
