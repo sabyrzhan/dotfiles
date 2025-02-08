@@ -113,6 +113,9 @@ matches:
   - trigger: ":dps"
     replace: "docker ps"
 
+  - trigger: ":dcd"
+    replace: "docker compose down"
+
   # JFrog
   - trigger: ":jfu"
     replace: |
@@ -142,6 +145,9 @@ matches:
   # xattr
   - trigger: ":xattr"
     replace: "xattr -r -d com.apple.quarantine PATH"
+
+  - trigger: ":cat"
+    replace : "cat .env && echo \"\""
 
   # And much more! For more information, visit the docs: https://espanso.org/docs/
 
