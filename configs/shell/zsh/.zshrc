@@ -154,6 +154,7 @@ alias gs="git status"
 alias gr="git remote -vv"
 alias gp="git pull"
 alias gc="git clone"
+alias gd="git difftool --dir-diff -y"
 
 #sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
