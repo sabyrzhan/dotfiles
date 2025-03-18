@@ -154,6 +154,12 @@ alias gs="git status"
 alias gr="git remote -vv"
 alias gp="git pull"
 alias gc="git clone"
+
+# For git difftool to work with IDEA add following to .gitconfig:
+# [diff]
+#   tool = intellijdiff
+# [difftool "intellijdiff"]
+#   cmd = "open -na \"/Users/sabyrzhan/Applications/IntelliJ IDEA Ultimate.app/Contents/MacOS/idea\" -W --args diff $LOCAL $REMOTE"%
 alias gd="git difftool --dir-diff -y"
 
 #sdkman
