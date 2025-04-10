@@ -161,6 +161,9 @@ alias gc="git clone"
 # [difftool "intellijdiff"]
 #   cmd = "open -na \"/Users/sabyrzhan/Applications/IntelliJ IDEA Ultimate.app/Contents/MacOS/idea\" -W --args diff $LOCAL $REMOTE"%
 alias gd="git difftool --dir-diff -y"
+alias ga="git add ."
+unalias gm
+gm() { git commit -m "$@"; }
 
 # This is to fetch and run AMD64 images on Apple M1 machines
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
