@@ -162,6 +162,9 @@ alias gc="git clone"
 #   cmd = "open -na \"/Users/sabyrzhan/Applications/IntelliJ IDEA Ultimate.app/Contents/MacOS/idea\" -W --args diff $LOCAL $REMOTE"%
 alias gd="git difftool --dir-diff -y"
 
+# This is to fetch and run AMD64 images on Apple M1 machines
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
 #sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
