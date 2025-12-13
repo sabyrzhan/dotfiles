@@ -2,7 +2,6 @@
 tap "argoproj/tap"
 tap "espanso/espanso"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
 tap "johanhaleby/kubetail"
 tap "teamookla/speedtest"
 
@@ -41,7 +40,7 @@ brew "skopeo"
 
 # Casks
 cask "arc"
-cask "docker"
+cask "docker-desktop"
 cask "1password"
 cask "1password-cli"
 cask "espanso"
