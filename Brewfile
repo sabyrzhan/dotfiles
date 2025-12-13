@@ -39,7 +39,6 @@ brew "libpq" # PostgreSQL tools: https://stackoverflow.com/questions/44654216/co
 brew "skopeo"
 
 # Casks
-cask "arc"
 cask "docker-desktop"
 cask "1password"
 cask "1password-cli"
@@ -49,7 +48,6 @@ cask "iterm2"
 cask "jordanbaird-ice"
 cask "karabiner-elements"
 cask "keepingyouawake"
-cask "kui"
 cask "logseq"
 cask "miniconda"
 cask "multipass"
