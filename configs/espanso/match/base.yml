@@ -50,7 +50,7 @@ matches:
   - trigger: ":tfi"
     replace: "terraform init"
 
-  - trigger: ":tffmt"
+  - trigger: ":tfm"
     replace: "terraform fmt -recursive ."
 
   - trigger: ":tfsrm"
@@ -140,7 +140,7 @@ matches:
 
   # nohup
   - trigger: ":nohup"
-    replace: "nohup CMD > output.txt 2>&1 &"
+    replace: "nohup CMD > /tmp/output.txt 2>&1 &"
 
   # xattr
   - trigger: ":xattr"
@@ -148,6 +148,12 @@ matches:
 
   - trigger: ":cat"
     replace : "cat .env && echo \"\""
+  
+  - trigger: ":unsetdocker"
+    replace: "unset DOCKER_DEFAULT_PLATFORM"
+
+  - trigger: ":k9s"
+    replace: "k9s --context "
 
   # And much more! For more information, visit the docs: https://espanso.org/docs/
 
