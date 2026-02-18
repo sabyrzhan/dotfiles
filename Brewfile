@@ -40,8 +40,6 @@ brew "skopeo"
 
 # Casks
 cask "docker-desktop"
-cask "1password"
-cask "1password-cli"
 cask "espanso"
 cask "iina"
 cask "iterm2"
