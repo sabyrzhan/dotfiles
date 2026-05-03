@@ -3,4 +3,4 @@
 #	email = Work email
 
 #[core]
-#   sshCommand = ssh -i ~/.ssh/WORK_SSH_KEY -o IdentitiesOnly=yes%
+#   sshCommand = ssh -i ~/.ssh/WORK_SSH_KEY -o IdentitiesOnly=yes
