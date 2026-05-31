@@ -175,5 +175,9 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+#source /usr/share/doc/fzf/examples/key-bindings.zsh
+source $HOME/.fzf/shell/key-bindings.zsh
+export FZF_CTRL_R_OPTS="--reverse --exact --no-sort --height 20 --border"
+
 # Debug end: uncomment bellow for zshrc load time debug (also uncommend the start at the start of this file)
 # zprof
